@@ -7,10 +7,12 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu";
-import { useTheme } from "@/components/shared/ThemeProvider";
+import { useThemeProviderContext } from "@/hooks/general/useThemeProviderContext";
+import { ThemeConstants } from "@/constants/general/themeConstants";
+
 
 export function ModeToggle() {
-	const { setTheme } = useTheme();
+	const { setTheme } = useThemeProviderContext();
 
 	return (
 		<DropdownMenu>
@@ -22,13 +24,13 @@ export function ModeToggle() {
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align="end">
-				<DropdownMenuItem onClick={() => setTheme("light")}>
+				<DropdownMenuItem onClick={() => setTheme(ThemeConstants.Light)}>
 					Light
 				</DropdownMenuItem>
-				<DropdownMenuItem onClick={() => setTheme("dark")}>
+				<DropdownMenuItem onClick={() => setTheme(ThemeConstants.Dark)}>
 					Dark
 				</DropdownMenuItem>
-				<DropdownMenuItem onClick={() => setTheme("system")}>
+				<DropdownMenuItem onClick={() => setTheme(ThemeConstants.System)}>
 					System
 				</DropdownMenuItem>
 			</DropdownMenuContent>
