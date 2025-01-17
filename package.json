@@ -1,0 +1,22 @@
+{
+  "name": "playwright-dependable",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "start": "node start.ts",
+    "begin": "npm test && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.6"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.47.16",
+    "playwright": "^1.49.1"
+  }
+}
